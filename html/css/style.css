@@ -1,5 +1,6 @@
-body, input, button{
+*{
     margin: 0;
+    padding: 0;
     font-family: 'Roboto Condensed', sans-serif;
 }
 /* LOGIN form*/
@@ -9,7 +10,7 @@ body, input, button{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(#0059b3, #1a8cff);
+    background-image: linear-gradient(#003d66, #005c99);
 }
 .loginForm{
     display: flex;
@@ -45,24 +46,24 @@ body, input, button{
 }
 .loginInput img{
     position: absolute;
-    width: 25px;
-    left: 1%;
+    width: 20px;
+    left: 2%;
 }
 .loginInput img[alt="Korisnik"]{
-    top:10%;
+    top:12%;
 }
 .loginInput img[alt="Lozinka"]{
-    top:42.5%;
+    top:44.5%;
 }
 .line{
-    border: 1px solid #fff;
+    border: thin solid #fff;
 }
 
 /*BUTTONS*/
 .button{
-    background-color: #0066cc;
+    background-color: #003d66;
     color: #fff;
-    border: 1px solid #0059b3;
+    border: 1px solid #004d80;
     text-transform: uppercase;
     font-size: small;
     letter-spacing: 2px;
@@ -70,3 +71,109 @@ body, input, button{
 .button:hover{
     opacity: 0.9;
 }
+
+/*LOGO*/
+.logo{
+    height: 10vh;
+    width: 100%;
+    padding: 1.3em;
+    display: flex;
+    align-items: center;
+    /*background-image: linear-gradient(to right, #ffffff, #f2f2f2);*/
+    /*background-color: #e6e6e6;*/
+    background-image: linear-gradient(#003d66, #005c99);
+}
+a{
+    text-decoration: none;
+}
+.logo img{
+    animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+  @keyframes fade-in-fwd {
+    0% {
+      transform: translateZ(-80px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+.logo a{
+    color: #003d66;
+    text-transform: uppercase;
+    font-size: 1.8em;
+    margin-left: 0.5em;
+    animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+  @keyframes tracking-in-expand-fwd {
+    0% {
+      letter-spacing: -0.5em;
+      transform: translateZ(-700px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  
+.logo a span{
+    color: #f2f2f2;
+}
+/*MENU*/
+.main-navigation {
+    background-color: #003d66;
+    font-size: 0;/*https://www.designcise.com/web/tutorial/how-to-remove-the-gap-between-inline-block-elements*/
+}
+.main-navigation li{
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 0.8em 2em;
+    color: #fff;
+    border-right: thin solid #cccccc;
+    font-size: 0.9rem;
+}
+.main-navigation li:hover{
+    background-color: #333;
+}
+.main-navigation li a{
+    color: #fff;
+}
+
+
+ /* #toggle-input {
+    display: none;
+  }
+  .toggle-btn {
+  display: none;  
+  }
+  @media only screen and (max-width: 800px) {
+    .toggle-btn {
+      display: block;
+      width: 50px;
+      height: 50px;
+      background: url('../images/hamburger.png') no-repeat;
+
+    }
+    .main-menu ul{
+      display: none;
+    }
+    #toggle-input:checked + .main-menu ul{
+      display: block;
+    } 
+    #toggle-input:checked + .main-menu .toggle-btn {
+      background: url('../images/close.png') no-repeat;
+    }
+    .main-menu li{
+      display: block;
+    }
+  }*/
+
+  ul li:last-child{
+
+  }
+  
