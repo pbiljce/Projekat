@@ -3,6 +3,15 @@
     padding: 0;
     font-family: 'Roboto Condensed', sans-serif;
 }
+.page{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.main-header{
+  display: flex;
+  flex-direction: column;
+}
 /* LOGIN form*/
 .loginContainer{
     width: 100vw;
@@ -59,23 +68,22 @@
     border: thin solid #fff;
 }
 
-/*BUTTONS*/
-.button{
+/*LOGIN BUTTON*/
+.loginbutton{
     background-color: #003d66;
     color: #fff;
     border: 1px solid #004d80;
     text-transform: uppercase;
     font-size: small;
-    letter-spacing: 2px;
+    /*letter-spacing: 2px;*/
 }
-.button:hover{
+.loginbutton:hover{
     opacity: 0.9;
 }
 
 /*LOGO*/
 .logo{
-    height: 10vh;
-    width: 100%;
+    height: 6vh;
     padding: 1.3em;
     display: flex;
     align-items: center;
@@ -128,6 +136,8 @@ a{
 .main-navigation {
     background-color: #003d66;
     font-size: 0;/*https://www.designcise.com/web/tutorial/how-to-remove-the-gap-between-inline-block-elements*/
+    display: flex;
+    justify-content: space-between;
 }
 .main-navigation li{
     display: inline-block;
@@ -143,6 +153,23 @@ a{
 .main-navigation li a{
     color: #fff;
 }
+
+
+/*DROPDOWN MENU*/
+.main-navigation li ul{
+  display:none;
+}
+.main-navigation li:hover ul{
+  display:block;
+  position:absolute;
+  background-color: #003d66;
+  right: 0;
+}
+.main-navigation li:hover ul li{
+  display:block;
+  border-right: none;
+}
+
 
 
  /* #toggle-input {
@@ -173,7 +200,150 @@ a{
     }
   }*/
 
-  ul li:last-child{
 
+/*ADD/UPDATE EMPLOYEES*/
+.employees{
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.employees form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  font-size: 0.9em;
+  border: 1px solid #d9d9d9;
+  padding: 1em;
+}
+.employees form input{
+  margin: 0.3em 0;
+  padding: 0.3em;
+}
+.employees .form-header{
+  background-color: #004d80;
+  padding: 1em;
+  margin-bottom: 1em;
+  color: #ffffff;
+  text-align: center;
+}
+
+/*TABLE EMPLOYEES*/
+.table-header {
+   background-color: #004d80;
+   color: white;
+   padding: 0.5rem;
+   text-align: center;
+   text-transform: uppercase;
+}
+.search{
+  display: flex;
+  margin: 1em;
+}
+.search input{
+  flex-direction: row;
+}
+.search input:first-child{
+  flex-grow: 1;
+}
+.table-employees{
+   margin: 1em auto;
+   font-size: 0.9em;
+}
+.table-employees table,.table-employees tr{ 
+  border: 1px solid #d9d9d9; 
+  border-collapse: collapse;
+  width: 100%;
+}
+.table-employees td,.table-employees th{ 
+  padding: 0.2em;
+  text-align: center;
+  font-weight: normal;
+}
+.table-employees tr:hover{ 
+ background-color: #f2f2f2;
+}
+.table-employees th{ 
+  color: #003d66;
+  background-color:#d9d9d9;
+  text-transform: uppercase;
+}
+.table-employees td:last-child{ 
+  text-align: right;
+}
+
+@media screen and (max-width: 700px) {  
+  .employees{
+    width: 100%;
+  } 
+  .table-employees table, tr, td{ 
+    display: block;
   }
+  .table-employees tr{
+    position: relative;
+  }
+  .table-employees tr:first-child{ 
+    display: none; 
+  }
+  .table-employees td:first-child{
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    font-weight: bold;
+  }
+  .table-employees td:not(:first-child){
+    clear: both;
+    margin-left: 35%;
+    position: relative;
+    text-align: left;
+  }
+  .table-employees td:nth-child(n+1):before{color: #003d66;}
+  .table-employees td:nth-child(2):before {content:'Organizaciona jedinica : ';}
+  .table-employees td:nth-child(3):before {content:'Email: ';}
+  .table-employees td:nth-child(4):before {content:'Broj telefona: ';}
+  .table-employees td:nth-child(5):before {content:'Broj kancelarije: ';}
+  .table-employees td:nth-child(6):before {content:'';}
+  .table-employees td:last-child{ 
+    text-align: left;
+  }
+}
+@media screen and (max-width: 500px) {
+  .table-employees td:first-child { 
+    position: relative;   
+    top: 0;
+    width: 100%;
+  }
+  .table-employees td:not(:first-child) {
+    margin: 0;
+    padding: 0.2em 0.5em;
+  }
+  .table-employees td:before {
+    padding-top: 0.3em;
+    position: relative;
+  }
+  .table-employees td:last-child{
+    padding-bottom: 1em
+  }
+}
   
+/*BUTTONS*/
+.button{
+    color: #FFFFFF;
+    position: relative;
+    padding: 0.3em 1em;
+    box-shadow: 0 4px 0 0 #003d66;
+    border: 0;
+    border-radius: 0.5em;
+    background-color:#005c99;
+    margin: 0.3em;
+    transition: box-shadow 100ms ease-in-out;
+} 
+.button:active{
+    box-shadow: none;
+    background-color:#0268ac;
+}
+.button:hover{
+    background-color:#0268ac;
+}
+

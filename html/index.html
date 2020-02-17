@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="page">
-        <header>
+        <header class="main-header">
             <div class="logo">
                 <img src="images/logo.svg" alt="Logo - Elektronska evidencija računarske opreme">
                 <a href="index.html"><span>Evidencija računarske opreme</span></a>
@@ -23,12 +23,92 @@
                         <li><a href="#">Zaposleni - Zaduživanje/Razduživanje</a></li>
                         <li><a href="#">Oprema</a></li>
                         <li><a href="#">Izvještaji</a></li>
-                        <li><a href="#">Odjava</a></li>
+                    </ul>
+                    <ul>
+                        <li class="dropdown"><a href="#">Korisnik</a>
+                            <ul class="dropdown-content">
+                                <li>Korisničko uputstvo</li>
+                                <li>Promjena lozinke</li>
+                                <li>Odjava</li>
+                            </ul>
+                        </li>
                     </ul>
                 <!--</div>-->
             </nav>
         </header>
         <main>
+            <div class="employees">
+                <form action="#" method="POST">
+                    <div class="form-header">Unos/Izmjena podataka o zaposlenom</div>
+                    <input type="text" name="firstname" placeholder="Ime">
+                    <input type="text" name="lastname" placeholder="Prezime">
+                    <input type="text" name="email" placeholder="Email">
+                    <input type="text" name="phone" placeholder="Broj telefona">
+                    <input type="text" name="office" placeholder="Broj kancelarije">
+                    <input type="submit" class="button" value="Sačuvaj">
+                </form>
+            </div>
+            <div class="table-employees">
+                <div class="table-header">Lista zaposlenih</div>
+                <div class="search">
+                    <input type="text" name="search">
+                    <input type="submit" value="Pretraži" class="button">
+                </div>
+                <table>
+                   <tr>
+                      <th>Ime i prezime</th>
+                      <th>Organizaciona jedinica</th>
+                      <th>Email</th>
+                      <th>Broj telefona</th>
+                      <th>Broj kancelarije</th>
+                      <th></th>
+                   </tr>
+                   <tr>
+                      <td>Ime Prezime</td>
+                      <td>Organizaciona jedinica</td>
+                      <td>ime.prezime@test.com</td>
+                      <td>0123456789</td>
+                      <td>1212</td>
+                      <td>
+                          <input type="submit" class="button" value="Izmjena podataka o zaposlenom">
+                          <input type="submit" class="button" value="Zaduživanje/Razduživanje opreme">
+                      </td>
+                   </tr>
+                   <tr>
+                        <td>Ime Prezime</td>
+                        <td>Organizaciona jedinica</td>
+                        <td>ime.prezime@test.com</td>
+                        <td>0123456789</td>
+                        <td>1212</td>
+                        <td>
+                            <input type="submit" class="button" class="button" value="Izmjena podataka o zaposlenom">
+                            <input type="submit" class="button" class="button" value="Zaduživanje/Razduživanje opreme">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ime Prezime</td>
+                        <td>Organizaciona jedinica</td>
+                        <td>ime.prezime@test.com</td>
+                        <td>0123456789</td>
+                        <td>1212</td>
+                        <td>
+                            <input type="submit" class="button" value="Izmjena podataka o zaposlenom">
+                            <input type="submit" class="button" value="Zaduživanje/Razduživanje opreme">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ime Prezime</td>
+                        <td>Organizaciona jedinica</td>
+                        <td>ime.prezime@test.com</td>
+                        <td>0123456789</td>
+                        <td>1212</td>
+                        <td>
+                            <input type="submit" class="button" value="Izmjena podataka o zaposlenom">
+                            <input type="submit" class="button" value="Zaduživanje/Razduživanje opreme">
+                        </td>
+                    </tr>
+                </table>
+             </div>
         </main>
         <footer>
 
@@ -36,3 +116,5 @@
     </div>
 </body>
 </html>
+
+
